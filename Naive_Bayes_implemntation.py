@@ -49,30 +49,6 @@ y_test = test_set['fire']
 
 #X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=101)
 
-#--------------------------------------------------------------------
-
-#Import knearest neighbors Classifier model
-from sklearn.neighbors import KNeighborsClassifier
-
-
-
-#Create KNN Classifier
-knn = KNeighborsClassifier(n_neighbors=7)
-
-#Train the model using the training sets
-knn.fit(X_train, y_train)
-
-from sklearn.metrics import accuracy_score
-predictions_train = knn.predict(X_train)
-score_train=accuracy_score(y_train,predictions_train)*100
-predictions_test = knn.predict(X_test)
-score_test=accuracy_score(y_test,predictions_test)*100
-print("The accuracy percentage of KNN for train dataset:",score_train)
-print("The accuracy percentage of KNN for test dataset:",score_test)
-
-
-
-
 #----------------------------------------------------------------------
 #Import Gaussian Naive Bayes model
 from sklearn.naive_bayes import GaussianNB
